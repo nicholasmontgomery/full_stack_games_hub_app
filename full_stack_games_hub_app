@@ -1,0 +1,9 @@
+1. Game Form Submission (v-models input data to script)
+2. addGame method is run, creating a new game with various properties matching the form
+3. Finally the new game isposted via the postGame method (defined in GamesService)
+4. In GamesService.js the game is fed in as payload in the postGame method, posted to the URL http://localhost:3000/api/games/, headers are added, and turned to JSON string / JSON
+6. POST request sent over to backend.
+7. Run through router.post in create_route.js. Inserts body (JSON) into create router through insertOne
+8. creates db connection,
+9. Uses Mongo db insertOne method to add the new data const to database collection
+10. In GamesGrid.vue a mounted getGetGames the grid will update on refresh, or will add ay new gae to the grid without a refresh via the 'game added' eventBus
